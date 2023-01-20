@@ -1,4 +1,4 @@
-//C++ Program to Convert Binary Number to Decimal
+//C++ Program to Convert Binary Number to Decimal Number
 
 #include <iostream>
 #include <cmath>
