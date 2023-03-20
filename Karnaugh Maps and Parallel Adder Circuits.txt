@@ -1,0 +1,313 @@
+﻿MORGAN STATE UNIVERSITY 
+CLARENCE M. MITCHELL, JR. SCHOOL OF ENGINEERING 
+DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING
+
+
+
+
+
+
+EEGR 211
+Introduction to Digital Logic
+Spring 2023
+
+
+
+
+
+
+Lab # 3 : Karnaugh Maps and Parallel Adder Circuits
+Submitted On: March 20, 2023
+Due Date: March 23, 2023
+
+
+
+
+
+
+Submitted by:
+Jermaine Lennon
+
+
+Instructor: Dr. Fahmi Khalifa
+Assistant Professor of ECE
+Karnaugh Maps and Parallel Adder Circuits
+Introduction 
+This lab is the introduction to the use of Karnaugh Maps, Full adder circuits, and parallel adders. During the hardware portion of this lab we will build circuits with the use of Karnaugh Maps and use discrete Integrated Circuits (ICs) to build 4-bit parallel adders. During the software portion we will use Multisim in order to simulate a full adder circuit.
+Objective 
+* Learn how to build a hardware circuit using breadboards
+* Design and implement a schematic using truth tables and miniterms
+* Use Karnaugh Maps to simplify boolean functions and reduce total number of logic gates in a schematic
+Theory
+Karnaugh Maps (K-maps) 
+A K-map is a method used to simplify Boolean functions without the use of Boolean algebra theorems. Use of K-maps can be helpful in finding the sum of product and the product of sum of a boolean function. In order to find the sum of products map out the miniterms (HIGH Voltages) and map out the maxterms (LOW Voltages) to find the product of sum.
+  
+
+Full Adder
+In digital logic a full adder adds three inputs ( A, B, C-IN) in order to output ( SUM & C-OUT). C-IN is the input carry and C-OUT is output carry.
+Truth Table:
+Inputs
+	
+
+	
+
+	Outputs 
+	
+
+	A
+	B
+	C-IN
+	SUM
+	C-OUT
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	1
+	0
+	0
+	1
+	1
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	1
+	0
+	1
+	0
+	1
+	1
+	1
+	0
+	0
+	1
+	1
+	1
+	1
+	1
+	1
+	
+
+Logic Expression:
+
+
+  
+
+Integrated Circuits (ICs)
+Integrated Circuits are devices used to perform specific tasks.  The different types of ICs are: small-scale integration (logic gates); medium scale integration (digital elementary digital operations); large-scale integration (digital systems); and very-large-scale integrations(complex circuits).
+4-bit Parallel Adder
+A parallel adder is a circuit that outputs the arithmetic sum of two binary numbers that are greater than 1-bit. An advantage of parallel adders is the adder performs operations faster than the serial adder. However the disadvantage is each adder has to wait for the carry output from the previous chain.
+  
+ 
+Materials 
+
+
+* Digital Logic Gates
+   * 7404 (NOT)
+   * 7432 (OR)
+   * 74LS83 (4 bit Binary Adder) 
+
+
+	* LEDs        
+	* Breadboard                        
+	* Laptop        
+	* Electrical Wires
+	* Multisim 
+	* Triple Power Supply
+	* Multimeter
+	
+
+Procedure
+Part A: Simplification Using Karnaugh Map
+Design Problem-  Design a circuit that takes three inputs and the output is HIGH when a majority of the inputs are HIGH except for when A  and B are HIGH and C is LOW.
+1. Design a circuit that allows three inputs.
+2. Derive the truth table and express miniterms
+3. Use K-map to simplify expression
+4. Verify that the truth table
+5. Implement the simplified form using the least number of logic gates
+Part B: Full Adder Simulation
+A full adder digital circuit contains three one-bit inputs and two one bit outputs.
+1. Write the truth table of the full adder.
+2. Using Multisim simulate the circuit using
+   1. Full adder
+   2. Three function generators to produce a sequence of zeros and ones to simulate the input bits
+      1. Common terminals are grounded and positive terminals are connected to the input of the Full Adder
+      2. Using the square wave signal, change the frequency to 1000 Hz, 500 Hz, and 250 Hz for each respective generator.
+      3. Change the duty cycle to 50% and amplitude to 5 V.
+   3. Two Oscilloscopes to observed the outputs
+      1. Connect one oscilloscope Channel A to input A, Channel B to input B, and Channel C to input 
+      2. Connect the other oscilloscope channel A to output SUM and channel B to output CARRY of the Full Adder
+Part C: Full Bit Parallel Adder
+A 4-bit parallel adder can add two bits with a possible carry. The 74LS83 gate used in this lab can add two numbers with 4 bits each.
+   1. Using the 74LS83 pinout add 1001 and 0110
+   2. Then add 1100 and 1010
+   1. Use LEDs to display the sums
+Schematic(s)
+Part One
+  
+
+
+
+Part Three
+  
+
+Results
+Part One 
+Truth Table
+A
+	B
+	C
+	F
+	0
+	0
+	0
+	LOW
+	0
+	0
+	1
+	LOW
+	0
+	1
+	0
+	LOW
+	0
+	1
+	1
+	HIGH
+	1
+	0
+	0
+	LOW
+	1
+	0
+	1
+	HIGH
+	1
+	1
+	0
+	LOW
+	1
+	1
+	1
+	HIGH
+	
+
+Circuit
+  
+
+Part Two
+Truth Table 
+Inputs
+	
+
+	
+
+	Outputs 
+	
+
+	A
+	B
+	
+	SUM
+	
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	1
+	0
+	0
+	1
+	1
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	1
+	0
+	1
+	0
+	1
+	1
+	1
+	0
+	0
+	1
+	1
+	1
+	1
+	1
+	1
+	
+
+
+
+
+
+Simulation
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part Three
+1- A = 1001 and B = 0110
+  
+
+2- A = 1100 and B = 1010 
+  
+
+
+
+
+
+
+
+Analysis and Calculations
+Part One
+Truth Table:                                                        K-Map:
+  
+                                      
+Part Three 
+1- 1001 + 0110 = 1111 = 
+2- 1100 + 1010 = 10110 = 
+
+
+Conclusion
+In this lab I was able to build a circuit using hardware equipment such as: breadboards, resistors, LEDs, and logic gates. I also designed and implemented a schematic based on truth tables and miniterms, and use of K-maps to simplify boolean functions while reducing the number of logic gates. During the software portion I was able to understand how the full adder digital circuit works using Multisim Simulation and further my understanding using the same hardware equipment as before to build a full adder circuit on the breadboard.
